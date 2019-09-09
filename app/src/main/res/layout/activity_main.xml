@@ -8,8 +8,8 @@
 
     <ListView
         android:id="@+id/wig20ListView"
-        android:layout_width="395dp"
-        android:layout_height="715dp"
+        android:layout_width="392dp"
+        android:layout_height="655dp"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp" />
+        tools:layout_editor_absoluteY="68dp" />
 </android.support.constraint.ConstraintLayout>
