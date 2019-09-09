@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ListView tutorial</string>
+
+    <string-array name="items">
+        <item>Test1</item>
+        <item>Test2</item>
+        <item>Test3</item>
+    </string-array>
+
+    <string-array name="prices">
+        <item>4.99$</item>
+        <item>50.00$</item>
+        <item>495.00$</item>
+    </string-array>
+
+    <string-array name="descriptions">
+        <item>Test description</item>
+        <item>Some text</item>
+        <item>Some more text</item>
+    </string-array>
+</resources>
