@@ -9,13 +9,40 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     ListView wig20ListView;
+    ArrayList<StockRecord> mWig20records = null;
+
+
+    Runnable mWig20Updater = new Runnable() {
+        @Override
+        public void run() {
+            WebGateway webGateway = new WebGateway();
+            mWig20records = webGateway.getPricesWig20();
+            if(mWig20records != null){
+                showWig20();
+            }
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        /*################################################*/
 
+        wig20ListView = (ListView) findViewById(R.id.wig20ListView);
+
+//        testWig20ListViewAdapter();
+
+        Thread t = new Thread(mWig20Updater);
+        t.start();
+
+    }
+
+void showWig20(){
+    Wig20ListViewAdapter adapter= new Wig20ListViewAdapter(this,R.layout.adapter_view_layout, mWig20records);
+    wig20ListView.setAdapter(adapter);
+}
+
+void testWig20ListViewAdapter(){
         StockRecord titleBar = new StockRecord("Nazwa:", "Ticker:", "Kurs:", "Zmiana w procentach:");
         StockRecord record1 = new StockRecord("ALIOR", "ALR", "40,4600", "0,90%");
         StockRecord record2 = new StockRecord("CCC", "CCC", "6,5000", "0,0937%");
@@ -38,7 +65,6 @@ public class MainActivity extends AppCompatActivity {
         StockRecord record19 = new StockRecord("TEST", "TST", "0", "0%");
         StockRecord record20 = new StockRecord("TEST", "TST", "0", "0%");
 
-        wig20ListView = (ListView) findViewById(R.id.wig20ListView);
         ArrayList<StockRecord> wig20ArrayList = new ArrayList<>();
 
         wig20ArrayList.add(titleBar);
@@ -66,20 +92,5 @@ public class MainActivity extends AppCompatActivity {
 
         Wig20ListViewAdapter adapter= new Wig20ListViewAdapter(this,R.layout.adapter_view_layout, wig20ArrayList);
         wig20ListView.setAdapter(adapter);
-
-        /*################################################*/
-        Runnable r = new Runnable() {
-            @Override
-            public void run() {
-                WebGateway webGateway = new WebGateway();
-                webGateway.getPricesWig20();
-            }
-        };
-
-        Thread t = new Thread(r);
-        t.start();
-
     }
-
-
 }
