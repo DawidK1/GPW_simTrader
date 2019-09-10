@@ -18,7 +18,13 @@ public class MainActivity extends AppCompatActivity {
             WebGateway webGateway = new WebGateway();
             mWig20records = webGateway.getPricesWig20();
             if(mWig20records != null){
-                showWig20();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        showWig20();
+                    }
+                });
+
             }
         }
     };
