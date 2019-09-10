@@ -28,8 +28,15 @@ public class MainActivity extends AppCompatActivity {
         StockRecord record9 = new StockRecord("LPP", "LPP", "7305,0000", "1,81%");
         StockRecord record10 = new StockRecord("MBANK", "MBK", "326,0000", "4,96%");
         StockRecord record11 = new StockRecord("ORANGEPL", "OPL", "5,98", "-1,32%");
-
-        /*################################################*/
+        StockRecord record12 = new StockRecord("TEST", "TST", "0", "0%");
+        StockRecord record13 = new StockRecord("TEST", "TST", "0", "0%");
+        StockRecord record14 = new StockRecord("TEST", "TST", "0", "0%");
+        StockRecord record15 = new StockRecord("TEST", "TST", "0", "0%");
+        StockRecord record16 = new StockRecord("TEST", "TST", "0", "0%");
+        StockRecord record17 = new StockRecord("TEST", "TST", "0", "0%");
+        StockRecord record18 = new StockRecord("TEST", "TST", "0", "0%");
+        StockRecord record19 = new StockRecord("TEST", "TST", "0", "0%");
+        StockRecord record20 = new StockRecord("TEST", "TST", "0", "0%");
 
         wig20ListView = (ListView) findViewById(R.id.wig20ListView);
         ArrayList<StockRecord> wig20ArrayList = new ArrayList<>();
@@ -46,6 +53,15 @@ public class MainActivity extends AppCompatActivity {
         wig20ArrayList.add(record9);
         wig20ArrayList.add(record10);
         wig20ArrayList.add(record11);
+        wig20ArrayList.add(record12);
+        wig20ArrayList.add(record13);
+        wig20ArrayList.add(record14);
+        wig20ArrayList.add(record15);
+        wig20ArrayList.add(record16);
+        wig20ArrayList.add(record17);
+        wig20ArrayList.add(record18);
+        wig20ArrayList.add(record19);
+        wig20ArrayList.add(record20);
 
 
         Wig20ListViewAdapter adapter= new Wig20ListViewAdapter(this,R.layout.adapter_view_layout, wig20ArrayList);
