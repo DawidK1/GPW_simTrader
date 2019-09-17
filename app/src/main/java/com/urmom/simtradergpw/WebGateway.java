@@ -91,8 +91,6 @@ public class WebGateway {
             }
 
             br.close();
-            // add bar description
-            records.add(0, new StockRecord("Nazwa:", "Ticker:", "Kurs:", "Zmiana w procentach:"));
             return records;
         } catch (MalformedURLException e) {
             e.printStackTrace();

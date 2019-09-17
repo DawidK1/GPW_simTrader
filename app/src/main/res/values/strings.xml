@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Simtrader GPW</string>
+    <string name="wallet_value">Wartość portfela</string>
+    <string name="papers_value">Papiery</string>
+    <string name="money">Środki pieniężne</string>
+    <string name="wallet_details">Szczegóły portfela</string>
+    <string name="pln_suffix">PLN</string>
+    <string name="wallet_btn">Portfel</string>
+    <string name="orders_btn">Zlecenia</string>
+    <string name="transactions_btn">Transakcje</string>
+    <string name="showWIG20_btn">Notowania WIG20</string>
+    <string name="statistics_btn">Statystyki</string>
+    <string name="settings_btn">Ustawienia</string>
+    <string name="debt">Kredyt</string>
 </resources>

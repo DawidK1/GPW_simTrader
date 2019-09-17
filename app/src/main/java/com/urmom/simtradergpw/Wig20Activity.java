@@ -6,7 +6,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class Wig20Activity extends AppCompatActivity {
 
     ListView wig20ListView;
     ArrayList<StockRecord> mWig20records = null;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_wig20);
 
         wig20ListView = (ListView) findViewById(R.id.wig20ListView);
 

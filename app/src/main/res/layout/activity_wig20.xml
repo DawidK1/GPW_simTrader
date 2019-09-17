@@ -4,12 +4,74 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Wig20Activity">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorGreyBackground"
+        android:gravity="center"
+        android:text="Nazwa:"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlackText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ticker"
+        android:layout_width="85dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/name"
+        android:background="@color/colorGreyBackground"
+        android:gravity="center"
+        android:text="Ticker:"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorBlackText"
+        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/last"
+        android:layout_width="91dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/ticker"
+        android:background="@color/colorGreyBackground"
+        android:gravity="center"
+        android:text="Kurs:"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorBlackText"
+        app:layout_constraintStart_toEndOf="@+id/ticker"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/percentageChange"
+        android:layout_width="126dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/last"
+        android:background="@color/colorGreyBackground"
+        android:gravity="center"
+        android:text="Zmiana w procentach:"
+        android:textAlignment="textStart"
+        android:textColor="@color/colorBlackText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/last"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/wig20ListView"
-        android:layout_width="392dp"
-        android:layout_height="655dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="68dp" />
+        android:layout_width="383dp"
+        android:layout_height="510dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginEnd="9dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/last" />
 </android.support.constraint.ConstraintLayout>
