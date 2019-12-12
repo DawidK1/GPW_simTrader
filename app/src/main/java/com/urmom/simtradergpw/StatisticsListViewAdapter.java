@@ -1,7 +1,8 @@
 package com.urmom.simtradergpw;
 
 import android.content.Context;
-import android.text.Layout;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,43 +10,38 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
-
-
-public class Wig20ListViewAdapter extends ArrayAdapter<StockRecord> {
-
+public class StatisticsListViewAdapter extends ArrayAdapter<StockRecord> {
     private Context mContext;
     int mResource;
 
-    public Wig20ListViewAdapter(Context context, int resource, ArrayList<StockRecord> objects) {
+    public StatisticsListViewAdapter(Context context, int resource, ArrayList<StockRecord> objects) {
         super(context, resource, objects);
         mContext = context;
         mResource = resource;
     }
 
-
-    public View getView(int position, View convertView, ViewGroup parent) {
+    //@NonNull
+    @Override
+    public View getView(int position, /*@Nullable*/ View convertView, /*@NonNull*/ ViewGroup parent) {
         String name = getItem(position).getName();
         String ticker = getItem(position).getTicker();
         String last = getItem(position).getLast();
         String percentageChange = getItem(position).getPercentageChange();
-
+        String turnover = getItem(position).getTurnover();
 
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mResource, parent, false);
 
-
-        TextView tvName = convertView.findViewById(R.id.name);
-        TextView tvTicker = convertView.findViewById(R.id.ticker);
-        TextView tvLast = convertView.findViewById(R.id.last);
-        TextView tvPercentageChange = convertView.findViewById(R.id.percentageChange);
+        TextView tvName = (TextView) convertView.findViewById(R.id.instrumentName_textView);
+        TextView tvPercentageChange = (TextView) convertView.findViewById(R.id.instrumentChange_textView);
+        TextView tvTurnover = (TextView) convertView.findViewById(R.id.instrumentTurnover_textView);
 
         tvName.setText(name);
-        tvTicker.setText(ticker);
-        tvLast.setText(last);
         tvPercentageChange.setText(percentageChange);
+        tvTurnover.setText(turnover);
 
         return convertView;
+
     }
 }

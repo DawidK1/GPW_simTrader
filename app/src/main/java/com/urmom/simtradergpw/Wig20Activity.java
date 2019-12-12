@@ -44,12 +44,11 @@ public class Wig20Activity extends AppCompatActivity {
     }
 
 void showWig20(){
-    Wig20ListViewAdapter adapter= new Wig20ListViewAdapter(this,R.layout.adapter_view_layout, mWig20records);
+    Wig20ListViewAdapter adapter= new Wig20ListViewAdapter(this,R.layout.adapter_view_wig20, mWig20records);
     wig20ListView.setAdapter(adapter);
 }
 
 void testWig20ListViewAdapter(){
-        StockRecord titleBar = new StockRecord("Nazwa:", "Ticker:", "Kurs:", "Zmiana w procentach:");
         StockRecord record1 = new StockRecord("ALIOR", "ALR", "40,4600", "0,90%");
         StockRecord record2 = new StockRecord("CCC", "CCC", "6,5000", "0,0937%");
         StockRecord record3 = new StockRecord("CDPROJEKT", "CDR", "260,0000", "1,76%");
@@ -73,7 +72,6 @@ void testWig20ListViewAdapter(){
 
         ArrayList<StockRecord> wig20ArrayList = new ArrayList<>();
 
-        wig20ArrayList.add(titleBar);
         wig20ArrayList.add(record1);
         wig20ArrayList.add(record2);
         wig20ArrayList.add(record3);
@@ -96,7 +94,7 @@ void testWig20ListViewAdapter(){
         wig20ArrayList.add(record20);
 
 
-        Wig20ListViewAdapter adapter= new Wig20ListViewAdapter(this,R.layout.adapter_view_layout, wig20ArrayList);
+        Wig20ListViewAdapter adapter= new Wig20ListViewAdapter(this,R.layout.adapter_view_wig20, wig20ArrayList);
         wig20ListView.setAdapter(adapter);
     }
 }

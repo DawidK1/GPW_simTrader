@@ -15,6 +15,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".WalletActivity"></activity>
+        <activity android:name=".OrdersActivity"></activity>
+        <activity android:name=".TransactionsActivity"></activity>
+        <activity android:name=".Wig20Activity"></activity>
+        <activity android:name=".StatisticsActivity"></activity>
+        <activity android:name=".SettingsActivity"></activity>
         <activity android:name=".MenuActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,13 +27,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Wig20Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

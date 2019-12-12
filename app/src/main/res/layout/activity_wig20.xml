@@ -8,8 +8,8 @@
 
     <TextView
         android:id="@+id/name"
-        android:layout_width="110dp"
-        android:layout_height="35dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:background="@color/colorGreyBackground"
@@ -17,13 +17,16 @@
         android:text="Nazwa:"
         android:textAlignment="center"
         android:textColor="@color/colorBlackText"
+        app:layout_constraintBottom_toTopOf="@+id/header_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline15"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/top_guideline"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/ticker"
-        android:layout_width="85dp"
-        android:layout_height="35dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/name"
         android:background="@color/colorGreyBackground"
@@ -31,13 +34,16 @@
         android:text="Ticker:"
         android:textAlignment="textStart"
         android:textColor="@color/colorBlackText"
+        app:layout_constraintBottom_toTopOf="@+id/header_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
         app:layout_constraintStart_toEndOf="@+id/name"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/top_guideline"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/last"
-        android:layout_width="91dp"
-        android:layout_height="35dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/ticker"
         android:background="@color/colorGreyBackground"
@@ -45,33 +51,91 @@
         android:text="Kurs:"
         android:textAlignment="textStart"
         android:textColor="@color/colorBlackText"
+        app:layout_constraintBottom_toTopOf="@+id/header_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/percentageChange"
         app:layout_constraintStart_toEndOf="@+id/ticker"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/top_guideline" />
 
     <TextView
         android:id="@+id/percentageChange"
-        android:layout_width="126dp"
-        android:layout_height="35dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@+id/last"
         android:background="@color/colorGreyBackground"
         android:gravity="center"
         android:text="Zmiana w procentach:"
-        android:textAlignment="textStart"
+        android:textAlignment="center"
         android:textColor="@color/colorBlackText"
+        app:layout_constraintBottom_toTopOf="@+id/header_guideline"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/last"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/guideline19"
+        app:layout_constraintTop_toTopOf="@+id/top_guideline"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ListView
         android:id="@+id/wig20ListView"
-        android:layout_width="383dp"
-        android:layout_height="510dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginEnd="9dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/last" />
+        app:layout_constraintTop_toTopOf="@+id/header_guideline" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/header_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.34" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.56" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.78" />
 </android.support.constraint.ConstraintLayout>
