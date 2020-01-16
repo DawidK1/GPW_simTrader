@@ -16,7 +16,6 @@ public class WebGateway {
 
     enum State {NAME, VALUE, CHANGE, CHANGE_PERCENT, NOTHING}
 
-    ;
     private String preTemplate = "\" href=\"/inwestowanie/profile/quote.html?symbol=";
     private String pastTemplate = "</td>";
 
