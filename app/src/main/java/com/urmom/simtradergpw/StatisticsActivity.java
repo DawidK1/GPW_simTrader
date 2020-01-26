@@ -19,10 +19,10 @@ public class StatisticsActivity extends AppCompatActivity {
 
 
         /*-------------------------TEST-------------------------*/
-        StockRecord record1 = new StockRecord("ALIOR", "ALR", "40,4600", "0,90%", "2137");
-        StockRecord record2 = new StockRecord("CCC", "CCC", "6,5000", "0,0937%", "2137");
-        StockRecord record3 = new StockRecord("CDPROJEKT", "CDR", "260,0000", "1,76%", "2137");
-        StockRecord record4 = new StockRecord("CYFRPLSAT", "CPS", "28,5400", "1,78%", "2137");
+        StockRecord record1 = new StockRecord("ALIOR", "ALR", "40,4600", "0,90%", "6800");
+        StockRecord record2 = new StockRecord("CCC", "CCC", "6,5000", "0,0937%", "3440");
+        StockRecord record3 = new StockRecord("CDPROJEKT", "CDR", "260,0000", "1,76%", "5650");
+        StockRecord record4 = new StockRecord("CYFRPLSAT", "CPS", "28,5400", "1,78%", "9970");
 
         ArrayList<StockRecord> topGainersArrayList = new ArrayList<>();
 

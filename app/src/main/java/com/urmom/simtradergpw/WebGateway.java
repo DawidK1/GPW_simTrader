@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class WebGateway {
     String TAG = "WebGateway";
 
-    enum State {NAME, VALUE, CHANGE, CHANGE_PERCENT, NOTHING}
+    enum State {NAME, TICKER, VALUE, CHANGE, CHANGE_PERCENT, NOTHING}
 
     private String preTemplate = "\" href=\"/inwestowanie/profile/quote.html?symbol=";
     private String pastTemplate = "</td>";
@@ -40,14 +40,14 @@ public class WebGateway {
 
                 switch (parserState) {
 
-                    case NAME:
+
+                    case TICKER:
                         parsedLine = inputLine.replace("<td class=\"textAlignRight textNowrap\">", "").replace("</td>", "")
                                 .replace(" ", "")
                                 .replace("\t", "");
 
                         record.setTicker(parsedLine);
-                        record.setName(parsedLine);
-                        Log.d(TAG, "got name: " + parsedLine);
+                        Log.d(TAG, "got ticker: " + parsedLine);
                         parserState = State.VALUE;
                         break;
 
@@ -80,9 +80,14 @@ public class WebGateway {
 
                     default:
                         // new record found
+                        record = new StockRecord(null, null, null, null);
                         if (inputLine.contains(preTemplate)) {
-                            parserState = State.NAME;
-                            record = new StockRecord(null, null, null, null);
+                            inputLine = inputLine.trim();
+                            inputLine = inputLine.replace("<td class=\"colWalor textNowrap\"><a title=\"", "");
+                            inputLine = inputLine.substring(0, inputLine.indexOf(preTemplate));
+                            record.setName(inputLine);
+                            Log.d(TAG, "got name: " + inputLine);
+                            parserState = State.TICKER;
                             break;
 
                         }
