@@ -54,6 +54,7 @@ public class WebGateway {
                     case VALUE:
                         parsedLine = inputLine.replace("<td class=\"colKurs textAlignRight textNowrap change  up\">", "").replace("</td>", "")
                                 .replace("<td class=\"colKurs textAlignRight textNowrap change  down\">", "").replace("</td>", "")
+                                .replace("<td class=\"colKurs textAlignRight textNowrap change \">", "").replace("</td>", "")
                                 .replace(" ", "")
                                 .replace("\t", "");
 
@@ -68,8 +69,8 @@ public class WebGateway {
 
                     case CHANGE_PERCENT:
                         parsedLine = inputLine.replace("<td class=\"textAlignRight textNowrap change  up\">", "").replace("</td>", "")
-                                .replace("<td class=\"textAlignRight textNowrap change  down\">", "")
-                                .replace("</td>", "")
+                                .replace("<td class=\"textAlignRight textNowrap change  down\">", "").replace("</td>", "")
+                                .replace("<td class=\"textAlignRight textNowrap change \">", "").replace("</td>", "")
                                 .replace(" ", "")
                                 .replace("\t", "");
 
