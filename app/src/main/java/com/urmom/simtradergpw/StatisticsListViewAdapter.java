@@ -33,9 +33,9 @@ public class StatisticsListViewAdapter extends ArrayAdapter<StockRecord> {
         LayoutInflater inflater = LayoutInflater.from(mContext);
         convertView = inflater.inflate(mResource, parent, false);
 
-        TextView tvName = (TextView) convertView.findViewById(R.id.instrumentName_textView);
-        TextView tvPercentageChange = (TextView) convertView.findViewById(R.id.instrumentChange_textView);
-        TextView tvTurnover = (TextView) convertView.findViewById(R.id.instrumentTurnover_textView);
+        TextView tvName = convertView.findViewById(R.id.instrumentName_textView);
+        TextView tvPercentageChange = convertView.findViewById(R.id.instrumentChange_textView);
+        TextView tvTurnover = convertView.findViewById(R.id.instrumentTurnover_textView);
 
         tvName.setText(name);
         tvPercentageChange.setText(percentageChange);

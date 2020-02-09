@@ -47,12 +47,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="@string/wallet_value"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/left_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/walletDetails_text" />
+        app:layout_constraintTop_toTopOf="@+id/guideline41" />
 
     <TextView
         android:id="@+id/papersValue_text"
@@ -87,29 +87,33 @@
 
     <TextView
         android:id="@+id/walletDetails_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/colorMainTheme"
         android:fontFamily="sans-serif-condensed-light"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
         android:text="@string/wallet_details"
-        android:textColor="@color/colorAccent"
+        android:textAlignment="gravity"
+        android:textColor="@color/colorPrimary"
         android:textSize="30sp"
-        app:layout_constraintStart_toStartOf="@+id/left_guideline"
+        app:layout_constraintBottom_toTopOf="@+id/guideline41"
+        app:layout_constraintEnd_toStartOf="@+id/guideline37"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/top_guideline" />
 
     <TextView
         android:id="@+id/walletValue_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="0"
         android:textColor="@color/colorBlackText"
         android:textSize="18sp"
         app:layout_constraintEnd_toStartOf="@+id/pln_suffix1"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/guideline41" />
 
     <TextView
         android:id="@+id/debt_value"
@@ -173,20 +177,20 @@
         android:id="@+id/pln_suffix1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif-condensed-light"
         android:text="@string/pln_suffix"
         android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/guideline41" />
 
     <android.support.constraint.Guideline
         android:id="@+id/top_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.02872777" />
+        app:layout_constraintGuide_percent="0.0" />
 
     <android.support.constraint.Guideline
         android:id="@+id/bottom_guideline"
@@ -194,5 +198,26 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.35" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline37"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="1.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="75dp" />
 
 </android.support.constraint.ConstraintLayout>

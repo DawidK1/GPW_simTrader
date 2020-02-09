@@ -34,7 +34,7 @@ public class Wig20Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wig20);
 
-        wig20ListView = (ListView) findViewById(R.id.wig20ListView);
+        wig20ListView = findViewById(R.id.wig20ListView);
 
 
         Thread t = new Thread(mWig20Updater);

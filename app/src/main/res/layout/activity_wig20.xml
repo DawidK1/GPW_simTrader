@@ -12,7 +12,7 @@
         android:layout_height="0dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:background="@color/colorGreyBackground"
+        android:background="@color/colorMainTheme"
         android:gravity="center"
         android:text="Nazwa:"
         android:textAlignment="center"
@@ -29,7 +29,7 @@
         android:layout_height="0dp"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/name"
-        android:background="@color/colorGreyBackground"
+        android:background="@color/colorMainTheme"
         android:gravity="center"
         android:text="Ticker:"
         android:textAlignment="textStart"
@@ -46,7 +46,7 @@
         android:layout_height="0dp"
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@+id/ticker"
-        android:background="@color/colorGreyBackground"
+        android:background="@color/colorMainTheme"
         android:gravity="center"
         android:text="Kurs:"
         android:textAlignment="textStart"
@@ -63,7 +63,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_toEndOf="@+id/last"
-        android:background="@color/colorGreyBackground"
+        android:background="@color/colorMainTheme"
         android:gravity="center"
         android:text="Zmiana w procentach:"
         android:textAlignment="textStart"
@@ -130,7 +130,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.56" />
+        app:layout_constraintGuide_percent="0.6" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline19"

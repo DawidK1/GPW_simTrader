@@ -14,7 +14,7 @@ public class MenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_menu);
 
 
-        Button myWallet_btn = (Button)findViewById(R.id.wallet_btn);
+        Button myWallet_btn = findViewById(R.id.wallet_btn);
         myWallet_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -23,7 +23,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        Button orders_btn = (Button)findViewById(R.id.orders_btn);
+        Button orders_btn = findViewById(R.id.orders_btn);
         orders_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,7 +32,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        Button transactions_btn = (Button)findViewById(R.id.transactions_btn);
+        Button transactions_btn = findViewById(R.id.transactions_btn);
         transactions_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,7 +41,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        Button showWIG20_btn = (Button)findViewById(R.id.showWIG20_btn);
+        Button showWIG20_btn = findViewById(R.id.showWIG20_btn);
         showWIG20_btn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -52,7 +52,7 @@ public class MenuActivity extends AppCompatActivity {
         });
 
 
-        Button statistics_btn = (Button)findViewById(R.id.statistics_btn);
+        Button statistics_btn = findViewById(R.id.statistics_btn);
         statistics_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,7 +61,7 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        Button settings_btn = (Button)findViewById(R.id.settings_btn);
+        Button settings_btn = findViewById(R.id.settings_btn);
         settings_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

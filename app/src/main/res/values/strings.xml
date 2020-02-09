@@ -34,7 +34,13 @@
     <string name="instruments_falling">Liczba spadających spółek: </string>
     <string name="instruments_unchanged">Liczba spółek bez zmian: </string>
 
-
+    <!--orders-->
+    <string name="new_order">Nowe zlecenie</string>
+    <string name="paper">Spółka</string>
+    <string name="buy_sell">K/S</string>
+    <string name="quantity">Ilość</string>
+    <string name="limit">Limit</string>
+    <string name="current_orders">AKTYWNE ZLECENIA</string>
 
 
 </resources>

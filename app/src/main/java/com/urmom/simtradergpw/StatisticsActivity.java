@@ -15,7 +15,7 @@ public class StatisticsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_statistics);
 
-        topGainersListView = (ListView) findViewById(R.id.topGainers_listView);
+        topGainersListView = findViewById(R.id.topGainers_listView);
 
 
         /*-------------------------TEST-------------------------*/

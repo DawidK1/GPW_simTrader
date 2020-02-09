@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class WebGateway {
     String TAG = "WebGateway";
 
-    enum State {NAME, TICKER, VALUE, CHANGE, CHANGE_PERCENT, NOTHING}
+    enum State {TICKER, VALUE, CHANGE, CHANGE_PERCENT, NOTHING}
 
     private String preTemplate = "\" href=\"/inwestowanie/profile/quote.html?symbol=";
     private String pastTemplate = "</td>";
@@ -42,7 +42,7 @@ public class WebGateway {
 
 
                     case TICKER:
-                        parsedLine = inputLine.replace("<td class=\"textAlignRight textNowrap\">", "").replace("</td>", "")
+                        parsedLine = inputLine.replace("<td class=\"textAlignRight textNowrap\">", "").replace(pastTemplate, "")
                                 .replace(" ", "")
                                 .replace("\t", "");
 
@@ -52,12 +52,13 @@ public class WebGateway {
                         break;
 
                     case VALUE:
-                        parsedLine = inputLine.replace("<td class=\"colKurs textAlignRight textNowrap change  up\">", "").replace("</td>", "")
-                                .replace("<td class=\"colKurs textAlignRight textNowrap change  down\">", "").replace("</td>", "")
-                                .replace("<td class=\"colKurs textAlignRight textNowrap change \">", "").replace("</td>", "")
+                        parsedLine = inputLine.replace("<td class=\"colKurs textAlignRight textNowrap change  up\">", "").replace(pastTemplate, "")
+                                .replace("<td class=\"colKurs textAlignRight textNowrap change  down\">", "").replace(pastTemplate, "")
+                                .replace("<td class=\"colKurs textAlignRight textNowrap change \">", "").replace(pastTemplate, "")
                                 .replace(" ", "")
                                 .replace("\t", "");
 
+                        parsedLine = parsedLine.substring(0,parsedLine.length() -2);
                         record.setLast(parsedLine);
                         Log.d(TAG, "got value: " + parsedLine);
                         parserState = State.CHANGE;
@@ -68,9 +69,9 @@ public class WebGateway {
                         break;
 
                     case CHANGE_PERCENT:
-                        parsedLine = inputLine.replace("<td class=\"textAlignRight textNowrap change  up\">", "").replace("</td>", "")
-                                .replace("<td class=\"textAlignRight textNowrap change  down\">", "").replace("</td>", "")
-                                .replace("<td class=\"textAlignRight textNowrap change \">", "").replace("</td>", "")
+                        parsedLine = inputLine.replace("<td class=\"textAlignRight textNowrap change  up\">", "").replace(pastTemplate, "")
+                                .replace("<td class=\"textAlignRight textNowrap change  down\">", "").replace(pastTemplate, "")
+                                .replace("<td class=\"textAlignRight textNowrap change \">", "").replace(pastTemplate, "")
                                 .replace(" ", "")
                                 .replace("\t", "");
 
@@ -78,6 +79,7 @@ public class WebGateway {
                         records.add(record);
                         Log.d(TAG, "got change percent: " + parsedLine);
                         parserState = State.NOTHING;
+
 
                     default:
                         // new record found
